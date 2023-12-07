@@ -1,65 +1,89 @@
-body {
-    font-family: 'Arial', sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #000000; /* Negro */
+    box-sizing: border-box;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-nav {
+/* Navbar styles */
+.navbar {
     background-color: #345995; /* Azul */
-    color: yellow;
-    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
 
-nav h1 {
-    margin: 0;
-    display: inline;
+.logo a {
+    color: #f9d71c; /* Amarillo */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
 }
 
-nav ul {
+.nav-links {
     list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline;
+    display: flex;
 }
 
-nav li {
-    display: inline-block;
+.nav-links li {
     margin-right: 20px;
 }
 
-nav a {
-    color: yellow;
+.nav-links li a {
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
 }
 
-nav a:hover {
-    color: #ffffff; /* Azul más oscuro al pasar el ratón */
-}
-
-section {
-    margin-top: 40px;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
+.navbar {
     background-color: #345995; /* Azul */
-    color: yellow;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    /* ... otros estilos ... */
 }
 
-.button:hover {
-    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+.logo a {
+    color: #f9d71c; /* Amarillo */
+    /* ... otros estilos ... */
 }
 
+.nav-links li a {
+    color: white;
+    /* ... otros estilos ... */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #f9d71c; /* Amarillo */
+    color: #345995; /* Texto en tonalidad azul */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content p {
+    margin: 0;
+}
+.video-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+}
+.video-title {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: #f9d71c; /* Amarillo */
+      font-size: 24px;
+      font-weight: bold;
+      z-index: 1;
+}
+.video-iframe {
+      margin-top: 40px;
+      width: 100%;
+
+}
+
+.video-wrapper {
+      flex-basis: 48%;
+      position: relative;
+      margin-left: 10px; /* Separación desde el lado izquierdo */
+      margin-right: 10px;
+}

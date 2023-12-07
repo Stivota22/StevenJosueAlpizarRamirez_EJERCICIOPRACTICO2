@@ -1,13 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.Ejercicio2.controller;
 
-/**
- *
- * @author Usuario
- */
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/Vuelos") //nombre de la carpeta
 public class VuelosController {
-    
+    @GetMapping("/Vuelos") //nombre del html
+    public String create() {
+
+        return "/Vuelos/Vuelos"; //Ruta completa
+    }
 }

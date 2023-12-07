@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/estilos.css}" />
+    <title>FideFlights - Inicio</title>
+</head>
+    <body>
+     <header th:fragment="header" class="header">  
+            <div>
+                <nav class="navbar">
+                    <div class="logo">
+                        <a href="#">FideFlights</a>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a th:href="@{index}">Inicio</a></li> 
+                        <li><a th:href="@{/Vuelos/Vuelos}">Vuelos</a></li>
+                        <li><a th:href="@{Login.html}">Login</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+         
+            <!-- NavBar -->
+
+            <!-- Fin del NavBar -->
+        </header>
+            <!-- Fin del Setion -->
+            <setion>
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <div class="video-title">Cartagena</div>
+                        <iframe width="500" height="315" src="https://www.youtube.com/embed/VN0yGGcVii0?si=oAgCeWkXNgQLHTS1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="video-wrapper">
+                        <div class="video-title">Venezuela</div>
+                        <iframe width="500" height="315" src="https://www.youtube.com/embed/QYRwhB0UVu4?si=smYB3YP8HhIi_BAZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="video-wrapper">
+                        <div class="video-title">CostaRica</div>
+                        <iframe width="500" height="315" src="https://www.youtube.com/embed/jgkBk4soOMI?si=Jk92Dp02EQeZ7GJP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </setion>
+            <!-- Fin del Setion -->
+
+            <!-- Footer -->
+            <div>
+
+        
+        <footer th:fragment="footer" class="bg-dark text-white mt-5 p-2">
+            <div class="footer-content">
+                <p>© 2023 FideFlights. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+        </div>
+    </body>
+</html>

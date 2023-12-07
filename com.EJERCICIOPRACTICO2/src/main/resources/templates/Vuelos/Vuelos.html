@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+    <body>
+        <header th:replace="~{layout/plantilla :: header}"/>
+        <h2>Lista de Vuelos</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Vuelo</th>
+                    <th>Origen</th>
+                    <th>Destino</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Utiliza Thymeleaf para iterar sobre la lista de vuelos desde el controlador -->
+                <tr th:each="flight : ${flights}">
+                    <td th:text="${flight.id}"></td>
+                    <td th:text="${flight.origin}"></td>
+                    <td th:text="${flight.destination}"></td>
+                    <td th:text="${flight.date}"></td>
+                    <td th:text="${flight.time}"></td>
+                    <td>
+                        <!-- Enlace al controlador que maneja la reserva -->
+                        <a th:href="@{'/flights/reserve/' + ${flight.id}}" class="reserve-button">Reservar</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <footer th:replace="~{layout/plantilla :: footer}"/>
+
+    </body>
+</html>
